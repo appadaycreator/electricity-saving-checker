@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家電の電気代チェッカー【無料】無料診断・アドバイス</title>
+    <meta name="description" content="家電の消費電力・使用時間から月間電気代を計算して節電アドバイスを提供。登録不要・完全無料でご利用いただけます。">
+    <link rel="canonical" href="https://appadaycreator.github.io/electricity-saving-checker/">
+    <meta property="og:title" content="家電の電気代チェッカー【無料】無料診断・アドバイス">
+    <meta property="og:description" content="家電の消費電力・使用時間から月間電気代を計算して節電アドバイスを提供。登録不要・完全無料でご利用いただけます。">
+    <meta property="og:url" content="https://appadaycreator.github.io/electricity-saving-checker/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+    <!-- Clarity -->
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"家電の電気代チェッカー","description":"家電の消費電力・使用時間から月間電気代を計算して節電アドバイスを提供。登録不要・完全無料でご利用いただけます。","url":"https://appadaycreator.github.io/electricity-saving-checker/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #E0E7FF 0%, #F0F4FF 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        .site-header { background: #6366F1; color: white; padding: 32px 20px; text-align: center; }
+        .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
+        .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .site-header p { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 800px; margin: 0 auto; padding: 16px; }
+        .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
+        .btn { background: #6366F1; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; }
+        .btn:hover { opacity: 0.9; }
+        .btn:active { transform: scale(0.98); }
+        input, select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; }
+        input:focus, select:focus { outline: none; border-color: #6366F1; }
+        label { font-size: 13px; font-weight: 600; color: #555; display: block; margin-top: 14px; margin-bottom: 2px; }
+        .result { display: none; }
+        .result.show { display: block; }
+        .result-value { font-size: 36px; font-weight: 700; color: #6366F1; text-align: center; padding: 16px 0; }
+        .badge { display: inline-block; background: #6366F120; color: #6366F1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        /* ── サービス固有CSS ── */
+
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="site-header">
+        <div class="emoji">💡</div>
+        <h1>家電の電気代チェッカー</h1>
+        <p>家電の消費電力・使用時間から月間電気代を計算して節電アドバイスを提供。</p>
+    </header>
+
+    <main class="container">
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <div class="card" id="quiz-start">
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;">💡 家電の電気代チェッカー</h2>
+          <p style="color:#666;font-size:14px;margin-bottom:20px;">家電の使い方を選ぶだけで月の電気代目安と節電アドバイスが分かります。</p>
+          <button class="btn" onclick="startQuiz()">診断スタート →</button>
+        </div>
+        <div id="quiz-area" style="display:none;">
+          <div style="font-size:12px;color:#999;margin-bottom:8px;">
+            質問 <span id="q-num">1</span> / <span id="q-total">5</span>
+          </div>
+          <div id="q-progress" style="height:4px;background:#e5e7eb;border-radius:2px;margin-bottom:16px;">
+            <div id="q-bar" style="height:100%;background:#6366F1;border-radius:2px;transition:width .3s;width:20%;"></div>
+          </div>
+          <p id="q-text" style="font-size:16px;font-weight:600;margin-bottom:16px;"></p>
+          <div id="q-options" class="space-y-2"></div>
+        </div>
+        <div class="result" id="result">
+          <div class="card">
+            <h3 id="r-title" style="font-size:18px;font-weight:700;margin-bottom:8px;color:#6366F1;"></h3>
+            <p id="r-desc" style="color:#444;font-size:14px;line-height:1.7;"></p>
+            <button class="btn" style="margin-top:16px;" onclick="location.reload()">もう一度診断</button>
+          </div>
+        </div>
+
+        <!-- 関連サービス -->
+        <div class="card" style="margin-top:8px;">
+            <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+                <a href="https://appadaycreator.github.io/electric-bill-simulator/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">電気代シミュレーター →</a>
+                <a href="https://appadaycreator.github.io/electricity-cost-advisor/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">電気代削減診断 →</a>
+                <a href="https://appadaycreator.github.io/home-energy-advisor/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">家の断熱・省エネ診断 →</a>
+            </div>
+        </div>
+
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </main>
+
+    <footer style="text-align:center;padding:20px;color:white;font-size:12px;opacity:0.75;margin-top:8px;">
+        <p><a href="https://appadaycreator.github.io/" style="color:white;">AppADayCreator</a>
+        | <a href="privacy-policy.html" style="color:white;">プライバシーポリシー</a>
+        | <a href="terms.html" style="color:white;">利用規約</a>
+        | <a href="contact.html" style="color:white;">お問い合わせ</a></p>
+        <p style="margin-top:6px;">© 2025 AppADayCreator. All services are free.</p>
+    </footer>
+
+    <script>
+    // ★ここだけ実装（約15行）★
+    const QUESTIONS = [
+      { text:'エアコンの使用頻度は？', opts:['ほぼ使わない','1日2〜3時間','1日6時間以上','ほぼつけっぱなし'] },
+      { text:'冷蔵庫は何年前に購入しましたか？', opts:['3年以内','3〜8年前','8〜15年前','15年以上前'] },
+      { text:'テレビを1日どのくらい視聴しますか？', opts:['1時間未満','1〜3時間','3〜6時間','6時間以上'] },
+      { text:'洗濯乾燥機・衣類乾燥機は使っていますか？', opts:['使っていない','週1〜2回','週3〜4回','ほぼ毎日'] },
+      { text:'電気温水器・電気給湯器を使っていますか？', opts:['使っていない','エコキュートを使用','古い電気温水器を使用','日中の時間帯に沸かしている'] },
+      { text:'照明は主にどのタイプですか？', opts:['すべてLED','ほとんどLED','蛍光灯が多い','白熱電球が多い'] },
+    ];
+    function getResult(answers) {
+      let score = 0;
+      const weights = [
+        [0,2,5,8],
+        [0,1,3,5],
+        [0,1,3,5],
+        [0,1,3,5],
+        [0,0,4,3],
+        [0,0,2,4],
+      ];
+      answers.forEach((a,i) => { score += (weights[i]||[0,0,0,0])[a.idx]||0; });
+      if (score <= 5) return { title:'✅ 節電上手！月の電気代は比較的安め', desc:'エアコン・照明・家電の使い方がとても効率的です。このまま意識を続けましょう。さらにスマート家電の導入でさらに5〜10%削減できる可能性があります。' };
+      if (score <= 12) return { title:'⚡ まずまず。あと少しで大きく節電できます', desc:'エアコンや照明の使い方を見直すことで月500〜1,000円程度の削減が見込めます。不使用時の主電源OFF・冷蔵庫の設定温度を見直してみましょう。' };
+      if (score <= 20) return { title:'⚠️ 電気代がかさみやすい使い方です', desc:'古い冷蔵庫・乾燥機の多用・日中の給湯などが電気代を押し上げています。省エネ家電への買い替えや深夜電力の活用で月1,500〜3,000円の削減が期待できます。' };
+      return { title:'🔴 電気代が高くなりやすい状態です', desc:'家電の使用パターンを見直す余地が大きいです。エアコンの温度設定（冷房28℃・暖房20℃）、古い家電の買い替え、乾燥機の使用頻度削減で月3,000円以上の節約が見込めます。' };
+    }
+    // ★以下変更不要★
+    const BTN='#6366F1'; let cur=0; const ans=[];
+    document.addEventListener('DOMContentLoaded',()=>{{ document.getElementById('q-total').textContent=QUESTIONS.length; }});
+    function startQuiz(){{ cur=0;ans.length=0; document.getElementById('quiz-start').style.display='none'; document.getElementById('quiz-area').style.display='block'; document.getElementById('result').classList.remove('show'); renderQ(); }}
+    function renderQ(){{
+      const q=QUESTIONS[cur];
+      document.getElementById('q-num').textContent=cur+1;
+      document.getElementById('q-bar').style.width=((cur+1)/QUESTIONS.length*100)+'%';
+      document.getElementById('q-text').textContent=q.text;
+      document.getElementById('q-options').innerHTML=q.opts.map((o,i)=>`<button onclick="answer(${{i}})" style="width:100%;padding:12px;margin-bottom:8px;border:2px solid #e5e7eb;border-radius:10px;font-size:14px;cursor:pointer;background:#fff;text-align:left;">${{o}}</button>`).join('');
+    }}
+    function answer(idx){{ ans.push({{idx}}); cur++; if(cur>=QUESTIONS.length) showResult(); else renderQ(); }}
+    function showResult(){{
+      document.getElementById('quiz-area').style.display='none';
+      const r=getResult(ans);
+      document.getElementById('r-title').textContent=r.title;
+      document.getElementById('r-desc').textContent=r.desc;
+      document.getElementById('result').classList.add('show');
+    }}
+    </script>
+</body>
+</html>
