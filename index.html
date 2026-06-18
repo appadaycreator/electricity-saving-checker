@@ -115,6 +115,23 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
         .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
         @media(max-width:820px){.grid-3{grid-template-columns:1fr;}.grid-4{grid-template-columns:repeat(2,1fr);}.sec-title{font-size:21px;}section.block{padding:42px 0;}}
+        /* worry cards */
+        .worry{background:#fff;border:1px solid var(--line2);border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 6px 18px rgba(16,185,129,.06);}
+        .worry .ring{width:62px;height:62px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;border:2px solid var(--line2);}
+        .worry .ring img{width:34px;height:34px;}
+        .worry p{font-size:14px;color:var(--text);font-weight:600;line-height:1.7;}
+        /* value strip */
+        .value-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:30px;}
+        .vitem{text-align:center;}
+        .vitem .ring{width:70px;height:70px;border-radius:50%;background:#fff;border:2px solid var(--line2);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 8px 18px rgba(16,185,129,.12);}
+        .vitem .ring img{width:38px;height:38px;}
+        .vitem h4{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:5px;}
+        .vitem p{font-size:13px;color:var(--muted);line-height:1.7;}
+        .stat-band{background:linear-gradient(135deg,var(--green),var(--green-dd));border-radius:20px;padding:28px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;color:#fff;text-align:center;box-shadow:0 16px 40px rgba(5,150,105,.28);}
+        .stat-band .lab{font-size:16px;font-weight:700;}
+        .stat-band .amt{font-size:38px;font-weight:900;color:#fde68a;}
+        .stat-band .amt small{font-size:18px;}
+        @media(max-width:820px){.value-row{grid-template-columns:repeat(2,1fr);}.stat-band .amt{font-size:28px;}}
         /* appliance picker (decorative) */
         .appliance-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0;}
         .appliance-grid .ap{background:var(--soft2);border:1.5px solid var(--line2);border-radius:12px;padding:12px 6px;text-align:center;}
@@ -251,6 +268,21 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
     </section>
 
     <main id="main-content" role="main" aria-label="家電の電気代チェッカーのメインコンテンツ">
+      <!-- ── お悩み ── -->
+      <section class="block bg-soft" id="worry">
+        <div class="wrap">
+          <span class="eyebrow">CHECK YOUR HOME</span>
+          <h2 class="sec-title">こんなお悩みありませんか？</h2>
+          <p class="sec-lead">毎月の電気代、なんとなく払っていませんか。原因が分かれば、家計のムダはぐっと減らせます。</p>
+          <div class="grid-4">
+            <div class="worry"><div class="ring"><img src="assets/icons/split/04-04.png" alt=""></div><p>電気代が高い原因が分からない</p></div>
+            <div class="worry"><div class="ring"><img src="assets/icons/split/02-02.png" alt=""></div><p>どの家電が電気を食っているか知りたい</p></div>
+            <div class="worry"><div class="ring"><img src="assets/icons/split/04-07.png" alt=""></div><p>何から節電すればいいか迷っている</p></div>
+            <div class="worry"><div class="ring"><img src="assets/icons/split/03-03.png" alt=""></div><p>節電の効果を数字で確かめたい</p></div>
+          </div>
+        </div>
+      </section>
+
       <div class="container">
         <ins class="adsbygoogle" style="display:block;min-height:90px;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>try{try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}}catch(e){}</script>
@@ -319,9 +351,12 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
           <h2 class="sec-title">このサービスの特徴</h2>
           <p class="sec-lead">入力はかんたん、結果はビジュアル。診断型だから直感的に分かります。</p>
           <div class="grid-3">
-            <div class="feat"><div class="ic"><img src="assets/icons/split/03-06.png" alt=""></div><h3>5問のかんたん診断</h3><p>家電の使い方を選ぶだけ。約1分で月間電気代の目安が分かります。</p></div>
-            <div class="feat"><div class="ic"><img src="assets/icons/split/03-05.png" alt=""></div><h3>効率スコア＆グラフ化</h3><p>30点満点でスコア化し、レーダーチャートで弱点を見える化します。</p></div>
-            <div class="feat"><div class="ic"><img src="assets/icons/split/04-05.png" alt=""></div><h3>優先度つきアドバイス</h3><p>「今すぐ・手軽・効果的」の3軸で節電のコツを提案します。</p></div>
+            <div class="feat"><div class="ic"><img src="assets/icons/split/03-06.png" alt=""></div><h3>5問のかんたん診断</h3><p>家電の使い方を選ぶだけ。約1分で月間電気代の目安が分かります。難しい数値入力は不要です。</p></div>
+            <div class="feat"><div class="ic"><img src="assets/icons/split/03-05.png" alt=""></div><h3>効率スコア＆グラフ化</h3><p>あなたの使い方を30点満点でスコア化し、レーダーチャートで弱点を一目で見える化します。</p></div>
+            <div class="feat"><div class="ic"><img src="assets/icons/split/04-05.png" alt=""></div><h3>優先度つきアドバイス</h3><p>「今すぐ・手軽・効果的」の3軸で、あなたに合った節電のコツを提案します。</p></div>
+            <div class="feat"><div class="ic"><img src="assets/icons/split/02-02.png" alt=""></div><h3>主要家電を網羅</h3><p>エアコン・冷蔵庫・テレビ・洗濯乾燥機・給湯器・照明など、家庭の主要家電をカバー。</p></div>
+            <div class="feat"><div class="ic"><img src="assets/icons/split/01-08.png" alt=""></div><h3>診断履歴を自動保存</h3><p>結果はブラウザに自動保存。節電の取り組みを続けて、効果の変化を追えます。</p></div>
+            <div class="feat"><div class="ic"><img src="assets/icons/split/04-03.png" alt=""></div><h3>結果のシェア・出力対応</h3><p>結果のコピー・CSVダウンロード・SNSシェアに対応。家族や友人と比べられます。</p></div>
           </div>
         </div>
       </section>
@@ -336,6 +371,26 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
             <div class="step"><div class="ph" style="background-image:url('assets/photos/photo_02.jpg')"></div><span class="no">1</span><div class="bd"><h3>診断をスタート</h3><p>「無料で診断してみる」を押すだけ。登録もアプリも不要です。</p></div></div>
             <div class="step"><div class="ph" style="background-image:url('assets/photos/photo_03.jpg')"></div><span class="no">2</span><div class="bd"><h3>家電の使い方を選ぶ</h3><p>5つの質問に、当てはまる選択肢を選んでいくだけ。</p></div></div>
             <div class="step"><div class="ph" style="background-image:url('assets/photos/photo_04.jpg')"></div><span class="no">3</span><div class="bd"><h3>結果とアドバイスを確認</h3><p>電気代の目安・スコア・節電アドバイスが自動で表示されます。</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 価値 ── -->
+      <section class="block bg-soft" id="value">
+        <div class="wrap">
+          <span class="eyebrow">YOUR BENEFITS</span>
+          <h2 class="sec-title">このサービスがあなたにもたらす価値</h2>
+          <p class="sec-lead">ただ計算するだけじゃない。続けて、効果を実感できます。</p>
+          <div class="value-row">
+            <div class="vitem"><div class="ring"><img src="assets/icons/split/04-07.png" alt=""></div><h4>家計のムダを発見</h4><p>電気代の高い原因を特定し、削減ポイントが明確に。</p></div>
+            <div class="vitem"><div class="ring"><img src="assets/icons/split/03-05.png" alt=""></div><h4>数字で見える化</h4><p>スコアとグラフで現状を客観的に把握できます。</p></div>
+            <div class="vitem"><div class="ring"><img src="assets/icons/split/01-04.png" alt=""></div><h4>環境にもやさしい</h4><p>節電はCO₂削減にも直結。家計とエコを両立。</p></div>
+            <div class="vitem"><div class="ring"><img src="assets/icons/split/01-08.png" alt=""></div><h4>継続して習慣化</h4><p>履歴保存で、節電チャレンジを続けられます。</p></div>
+          </div>
+          <div class="stat-band">
+            <span class="lab">節電の取り組みで電気代を</span>
+            <span class="amt">最大3,000〜5,000円<small>/月</small></span>
+            <span class="lab">削減できる可能性も</span>
           </div>
         </div>
       </section>
