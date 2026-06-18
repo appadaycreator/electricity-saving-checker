@@ -194,6 +194,16 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
             section{padding:48px 0;}
             .gallery{grid-template-columns:repeat(3,1fr);}
         }
+        /* voices / testimonials */
+        .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+        .voice{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:0 8px 24px rgba(0,0,0,.05);display:flex;flex-direction:column;gap:12px;}
+        .voice .stars{color:#fbbf24;font-size:15px;letter-spacing:2px;}
+        .voice .txt{font-size:13.5px;color:var(--text);line-height:1.9;flex:1;}
+        .voice .who{display:flex;align-items:center;gap:12px;border-top:1px dashed var(--line);padding-top:14px;}
+        .voice .who img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--line2);}
+        .voice .who b{font-size:13.5px;color:var(--ink);display:block;}
+        .voice .who span{font-size:12px;color:var(--muted);}
+        @media(max-width:860px){.voice-grid{grid-template-columns:1fr;}}
         footer{background:#0f2e22;color:#cdeadd;text-align:center;padding:30px 20px;font-size:13px;}
         footer a{color:#a7f3d0;text-decoration:none;}
         .ad-slot{margin:8px auto;max-width:1120px;padding:0 20px;}
@@ -366,6 +376,32 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
                 <img src="../assets/photos/photo_20.jpg" alt="暮らしのシーン" loading="lazy">
                 <img src="../assets/photos/photo_21.jpg" alt="暮らしのシーン" loading="lazy">
                 <img src="../assets/photos/photo_22.jpg" alt="暮らしのシーン" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 利用者の声 ── -->
+    <section class="bg-soft">
+        <div class="wrap">
+            <span class="eyebrow">USER VOICES</span>
+            <h2 class="sec-title">利用者の声</h2>
+            <p class="sec-lead">電気代の見直しに役立てている方から、うれしい声が届いています。</p>
+            <div class="voice-grid">
+                <div class="voice">
+                    <div class="stars" aria-label="5段階評価で5">★★★★★</div>
+                    <p class="txt">「どの家電が電気を食っているのか一目で分かりました。診断どおりエアコンの設定を見直したら、翌月の電気代が2,000円ほど下がって驚いています。」</p>
+                    <div class="who"><img src="../assets/photos/photo_14.jpg" alt="利用者" loading="lazy"><div><b>Y.M さん</b><span>30代・共働き世帯</span></div></div>
+                </div>
+                <div class="voice">
+                    <div class="stars" aria-label="5段階評価で5">★★★★★</div>
+                    <p class="txt">「5つの質問に答えるだけなので、家事の合間でもサッと診断できました。優先度つきのアドバイスが具体的で、家族みんなで節電に取り組むきっかけになっています。」</p>
+                    <div class="who"><img src="../assets/photos/photo_13.jpg" alt="利用者" loading="lazy"><div><b>K.S さん</b><span>40代・子育て世帯</span></div></div>
+                </div>
+                <div class="voice">
+                    <div class="stars" aria-label="5段階評価で4">★★★★☆</div>
+                    <p class="txt">「登録不要ですぐ使えるのが気に入っています。スコアで現状が見えると、ゲーム感覚で節電を続けられて、毎月の固定費を意識するようになりました。」</p>
+                    <div class="who"><img src="../assets/photos/photo_06.jpg" alt="利用者" loading="lazy"><div><b>A.T さん</b><span>20代・一人暮らし</span></div></div>
+                </div>
             </div>
         </div>
     </section>
